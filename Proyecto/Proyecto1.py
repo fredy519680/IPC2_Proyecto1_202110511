@@ -1,4 +1,7 @@
 import os
+from Nodo import Nodobase
+from Graph import Graph
+
 print("hola mundo")
 
 def menuprincipal():
