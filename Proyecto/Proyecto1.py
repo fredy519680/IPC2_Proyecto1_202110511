@@ -1,5 +1,5 @@
 import os
-from Nodo import Nodobase
+from Nodo import Nodo
 from Graph import Graph
 
 print("hola mundo")

@@ -1,4 +1,4 @@
-class Nodobase():
+class Nodo():
     def __init__(self, id, dato):
         self.id = id
         self.dato = dato

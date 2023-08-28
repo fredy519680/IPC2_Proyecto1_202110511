@@ -1,4 +1,4 @@
-from Nodo import Nodobase
+from Nodo import Nodo
 from Graph import Graph
 
 class ListaSimple():
@@ -27,3 +27,14 @@ class ListaSimple():
         while yo != None:
             print(yo.getDato())
             yo =  yo.getSiguiente()
+
+    def graficar(self):
+        graph = Graph()
+        tmp = self.nodoInicio
+        while tmp != None:
+            graph.add(tmp, tmp.getSiguiente())
+            tmp = tmp.getSiguiente()
+        graph.generar()
+
+    
+
