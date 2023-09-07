@@ -8,3 +8,4 @@ ls.agregarFinal(7)
 ls.agregarFinal(8)
 
 ls.imprimir()
+ls.graficar("imagen")
