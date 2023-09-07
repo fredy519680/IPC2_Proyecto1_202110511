@@ -1,6 +1,7 @@
 import os
 from Nodo import Nodo
 from Graph import Graph
+from LecturaXML import LecturaXML
 
 print("hola mundo")
 
@@ -17,7 +18,7 @@ def menuprincipal():
     
 
     while True:
-        opcm = input("\nIngrese una opción : ")
+        opcm = input("\nIngrese una opción estás en el manú: ")
         if opcm.isdigit():
             opcm = int(opcm)
             if opcm == 1:
@@ -42,7 +43,24 @@ def menuprincipal():
             print("\nEsa opción no es valida\n")
 
 def CargarArchivo():
-    print("\nCreando Función\n")
+    print("\nHas seleccionado la opción cargar archivo:\n")
+    ruta = input("Ingrese la ruta del archivo: ")
+
+    while True:
+        nombre, extension = os.path.splitext(ruta)
+        if extension == ".xml":
+            print("\nArchivo valido\n")
+            print("Nombre: " + nombre)
+            print("Extension: "+ extension)
+            break
+            
+        else:
+            print("\nArchivo Invalido\n")
+            ruta = input ("\nIngrese la ruta nuevamente: ")
+
+    Objlectura = LecturaXML(ruta)
+    Objlectura.getDatos()
+
     
 
 def ProcesarArchivo():
@@ -52,7 +70,11 @@ def EscribirArchivo():
     print("\nCreando Función\n")
 
 def DatosEstudiante():
-    print("\nCreando Función\n")
+    print("> Fredy Alexander Esteban Pineda")
+    print("> 202110511")
+    print("> Introducción a la programación y computación")
+    print("> Ingenieria en Ciencias y Sistemas")
+    print("> 4to Semestre")
 
 def GenerarGrafica():
     print("\nCreando Función\n")
